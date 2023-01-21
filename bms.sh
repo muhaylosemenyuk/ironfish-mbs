@@ -98,7 +98,7 @@ function GetBinaryFunc() {
 
 
 function MainFunc() {
-    BIN=$(GetBinaryFunc)
+    BIN=ironfish
     GRAFFITI=$(echo $(${BIN} config:get blockGraffiti) | sed 's/\"//g')
 
     if [ $(echo "$(GetBalanceFunc) > 0.00000003" | bc ) -eq 1 ]; then
